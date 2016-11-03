@@ -1,5 +1,8 @@
+__precompile__(true)
+
 module Duiz
 
-# package code goes here
+include("util.jl")
+include("iter.jl")
 
 end # module
