@@ -9,12 +9,16 @@
 ```julia
 julia> using Duiz
 
-julia> Duiz.iter([(1,2),(5,6)])
-          e  = Tuple{Int64,Int64}[(1,2),(5,6)]
+julia> Duiz.iter([5 7;6 8])
+          e  = [5 7; 6 8]
           1 == start(e)
       false == done(e, 1)
- ((1,2), 2) == next(e, 1)
+     (5, 2) == next(e, 1)
       false == done(e, 2)
- ((5,6), 3) == next(e, 2)
-       true == done(e, 3)
+     (6, 3) == next(e, 2)
+      false == done(e, 3)
+     (7, 4) == next(e, 3)
+      false == done(e, 4)
+     (8, 5) == next(e, 4)
+       true == done(e, 5)
 ```
